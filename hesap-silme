@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hesap Silme Talebi Formu">
+    <title>Hesap Silme Talebi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Hesap Silme Talebi</h1>
+            <p class="subtitle">Hesabınızı silmek için aşağıdaki formu doldurun</p>
+        </header>
+
+        <div class="info-box">
+            <h3>⚠️ Önemli Bilgiler</h3>
+            <ul>
+                <li>Hesabınız silindiğinde tüm verileriniz kalıcı olarak silinecektir</li>
+                <li>Bu işlem geri alınamaz</li>
+                <li>Silme işlemi 30 gün içinde tamamlanacaktır</li>
+                <li>Bu süre içinde hesabınıza giriş yaparsanız silme işlemi iptal olur</li>
+            </ul>
+        </div>
+
+        <form id="deleteForm" class="delete-form">
+            <div class="form-group">
+                <label for="fullName">Ad Soyad *</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Adınız ve Soyadınız">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-posta Adresi *</label>
+                <input type="email" id="email" name="email" required placeholder="ornek@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="username">Kullanıcı Adı *</label>
+                <input type="text" id="username" name="username" required placeholder="Kullanıcı adınız">
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Silme Nedeni *</label>
+                <select id="reason" name="reason" required>
+                    <option value="">Bir neden seçin</option>
+                    <option value="not-using">Artık kullanmıyorum</option>
+                    <option value="privacy">Gizlilik endişeleri</option>
+                    <option value="new-account">Yeni hesap oluşturacağım</option>
+                    <option value="technical">Teknik sorunlar</option>
+                    <option value="other">Diğer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Ek Açıklama (İsteğe Bağlı)</label>
+                <textarea id="details" name="details" rows="4" placeholder="Hesabınızı silmek istemenizin nedeni hakkında daha fazla bilgi verebilirsiniz..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="confirm" name="confirm" required>
+                    <span>Hesabımın kalıcı olarak silineceğini ve bu işlemin geri alınamayacağını anladım ve onaylıyorum *</span>
+                </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="dataConsent" name="dataConsent" required>
+                    <span>Tüm kişisel verilerimin silineceğini kabul ediyorum *</span>
+                </label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-danger">Hesabımı Sil</button>
+                <button type="button" class="btn btn-secondary" onclick="window.history.back()">İptal</button>
+            </div>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            <h3>✅ Talebiniz Alındı</h3>
+            <p>Hesap silme talebiniz başarıyla kaydedildi. E-posta adresinize bir onay mesajı gönderildi.</p>
+            <p>30 gün içinde hesabınız kalıcı olarak silinecektir.</p>
+        </div>
+
+        <footer>
+            <p>Sorularınız için: <a href="mailto:destek@example.com">destek@example.com</a></p>
+            <p class="privacy-link"><a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Koşulları</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
