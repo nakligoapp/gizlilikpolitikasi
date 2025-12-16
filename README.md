@@ -1,0 +1,2 @@
+# gizlilikpolitikasi
+Gizlilik Politikası
